@@ -47,6 +47,7 @@ ReactDOM.render(
                         <Route exact path='/Login' component={Login} />
                         <Route exact path='/loaisp' component={Main} />
                         <Route exact path='/user' component={Main} />
+                        <Route exact path='/status' component={Main} />
                     </Switch>
             </div>
             </Router>

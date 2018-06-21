@@ -13,6 +13,14 @@ class Main extends Component {
         var {username} = this.props;
         var {token} = this.props;
         var {dispatch} = this.props;
+        var login = JSON.parse(localStorage.getItem('login'));
+        if(login)
+        {
+            username = login.name;
+            token = login.token;
+            dispatch({type: 'LOG_IN',username: username});
+            dispatch({type: 'TOKEN',token: token});
+        }
         return (
             <div>
                 <PanelLeft/>

@@ -5,6 +5,7 @@ import Modal from 'react-modal';
 import Login from './Login';
 import User from './UserList';
 import Categories from './CategoriesList';
+import StatusProduct from './StatusProduct';
 
 
 class PanelRight extends Component {
@@ -12,6 +13,7 @@ class PanelRight extends Component {
         var dispatch = this.props.dispatch;
         dispatch({type: 'LOG_OUT'});
         dispatch({type: 'TOKEN_OUT'});
+        localStorage.clear();
     }
          // load lần đầu (môt lân duy nhât)
     componentDidMount() {
@@ -147,11 +149,12 @@ class PanelRight extends Component {
                     </div>
 
                 </header>
-            <div class="content mt-3">
+            <div class="content mt-12">
                 <Switch>
                     <Route exact path='/' component={ProductList} />
                     <Route exact path='/user' component={User} />
                     <Route exact path='/loaisp' component={Categories} />
+                    <Route exact path='/status' component={StatusProduct} />
                 </Switch>
             </div>
         </div>

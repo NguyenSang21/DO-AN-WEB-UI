@@ -21,8 +21,9 @@ class PanelLeft extends Component {
                         </li>
                         <h3 class="menu-title">Home</h3>
                         <li><Link to={"/"} activeClassName="active"> Quản lý sản phẩm </Link></li>
-                        <li><Link to={"/loaisp"} activeClassName="active" > Quản lý loại sản phẩm</Link></li>
+                        <li><Link to={"/status"} activeClassName="active" > Quản lý trạng thái Sản Phẩm </Link></li>
                         <li><Link to={"/user"} activeClassName="active" > Quản lý user </Link></li>
+                        <li><Link to={"/loaisp"} activeClassName="active" > Quản lý loại sản phẩm</Link></li>
                         <li class="menu-item-has-children dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Components</a>
                             <ul class="sub-menu children dropdown-menu">

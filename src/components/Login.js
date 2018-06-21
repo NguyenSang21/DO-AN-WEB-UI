@@ -93,7 +93,10 @@ class Login extends Component {
                 dispatch({type: 'TOKEN',token: this.state.token});
                 dispatch({type: 'LOG_IN',username: username});
                 alert('Đăng nhập thành công mơi bạn liên hê admin sang');
-
+                localStorage.setItem('login', JSON.stringify({
+                    name: username,
+                    token: this.state.token,
+                }));
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow
